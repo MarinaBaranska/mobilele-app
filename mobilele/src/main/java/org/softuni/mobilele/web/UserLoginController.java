@@ -11,9 +11,9 @@ public class UserLoginController {
     //оказваме какви методи искаме да обработваме - get push..
 
     //метод обработващ get заявки
-    @GetMapping("/user/login")
+    @GetMapping("/users/login")
     public String login(){
-        return "auth-login"; //взимаме името от templates html
+        return "auth-login"; //взимаме името от templates html за да го визуализираме
 
     }
 
