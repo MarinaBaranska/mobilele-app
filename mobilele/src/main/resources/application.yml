@@ -5,14 +5,16 @@ spring:
     username: root
     password: Sm230021
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: update
-#    defer-datasource-initialization: true
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
 #    properties:
 #      hibernate:
 #        format_sql: true
 
+
+#при всеки старт на сървъра се изпълнява скрипта от sql
 #  sql:
 #    init:
 #      mode: never

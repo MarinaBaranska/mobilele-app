@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org">
 
 <head>
       <meta charset="UTF-8">
@@ -69,6 +69,7 @@ xmlns:th="http://www.thymeleaf.org">
 <div class="container">
     <h2 class="text-center text-white">Register User</h2>
 
+
     <form
             th:action="@{/users/register}"
             th:method="post"
@@ -96,7 +97,7 @@ xmlns:th="http://www.thymeleaf.org">
                 </p>
             </div>
         </div>
-        <div class="row">
+        <div class="form-group">
             <div class="form-group col-md-6 mb-3">
                 <label for="email" class="text-white font-weight-bold">Email</label>
                 <input id="email"
@@ -108,29 +109,32 @@ xmlns:th="http://www.thymeleaf.org">
                     Email is required.
                 </p>
             </div>
+        <div class="row">
             <div class="form-group col-md-6 mb-3">
                 <label for="password" class="text-white font-weight-bold">Password</label>
                 <input id="password"
                        name="password"
                        type="password"
-
                        class="form-control"
                        placeholder="Password"/>
                 <p class="errors alert alert-danger">
                     Password is required.
                 </p>
             </div>
+            <div class="form-group col-md-6 mb-3">
+                <label for="confirmPassword" class="text-white font-weight-bold">Confirm Password</label>
+                <input id="confirmPassword"
+                       name="confirmPassword"
+                       type="confirmPassword"
+
+                       class="form-control"
+                       placeholder="Confirm Password"/>
+                <p class="errors alert alert-danger">
+                    Password confirmation is required.
+                </p>
+            </div>
         </div>
-        <div class="form-group">
-            <label class="text-center text-white font-weight-bold" for="roles">Roles</label>
-            <select  id="roles" class="form-control" multiple>
-                <option>
-                </option>
-            </select>
-            <p class="errors alert alert-danger">
-                Selecting a role is required.
-            </p>
-        </div>
+
 
         <div class="row">
             <div class="col col-md-4">
